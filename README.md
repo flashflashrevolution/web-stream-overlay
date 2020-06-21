@@ -14,18 +14,18 @@ A web-based overlay for FFR rCubed, based on: https://github.com/Reselim/beat-sa
 
 ![browser_source](/images/browser_source.png?raw=true)
 
-3. Set the URL as `http://flashflashrevolution.github.io/web-stream-overlay/` (HTTP, not HTTPS!) and the size equal to your canvas size (1280x720, etc.)
+3. Set the URL as `https://flashflashrevolution.github.io/web-stream-overlay/` and the size equal to your canvas size (1280x720, etc.)
 
 ![browser_url](/images/browser_url.png?raw=true)
 
-4. (Optional) For 1080p canvases, add the `scale` modifier (ex. `http://flashflashrevolution.github.io/web-stream-overlay/?modifiers=scale`) to scale the overlay by 1.5x
+4. (Optional) For 1080p canvases, add the `scale` modifier (ex. `https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=scale`) to scale the overlay by 1.5x
 
 ## Options
 
 Options are added to the URL query as such:
 
 ```
-http://flashflashrevolution.github.io/web-stream-overlay/?modifiers=top
+https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=top
 ```
 
 ### `ip` and `port`
