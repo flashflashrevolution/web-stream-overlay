@@ -6,15 +6,19 @@ A web-based overlay for FFR rCubed, based on: https://github.com/Reselim/beat-sa
 
 ## Installation (OBS)
 
-1. Create a Browser source
+1. Enable HTTP Websocket Server in rCubed in the options under [Other Options].
+
+![rcubed_websocket](/images/rcubed_websocket.png?raw=true)
+
+2. Create a Browser source
 
 ![browser_source](/images/browser_source.png?raw=true)
 
-2. Set the URL as `https://flashflashrevolution.github.io/web-stream-overlay/` (HTTP, not HTTPS!) and the size equal to your canvas size (1280x720, etc.)
+3. Set the URL as `https://flashflashrevolution.github.io/web-stream-overlay/` (HTTP, not HTTPS!) and the size equal to your canvas size (1280x720, etc.)
 
 ![browser_url](/images/browser_url.png?raw=true)
 
-3. (Optional) For 1080p canvases, add the `scale` modifier (ex. `https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=scale`) to scale the overlay by 1.5x
+4. (Optional) For 1080p canvases, add the `scale` modifier (ex. `https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=scale`) to scale the overlay by 1.5x
 
 ## Options
 
