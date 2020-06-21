@@ -1,7 +1,47 @@
 # rCubed Web Overlay
-Based on: https://github.com/Reselim/beat-saber-overlay
+
+A web-based overlay for FFR rCubed, based on: https://github.com/Reselim/beat-saber-overlay
 
 ![preview](/images/preview.png?raw=true)
+
+## Installation (OBS)
+
+1. Create a Browser source
+
+![browser_source](/images/browser_source.png?raw=true)
+
+2. Set the URL as `https://flashflashrevolution.github.io/web-stream-overlay/` (HTTP, not HTTPS!) and the size equal to your canvas size (1280x720, etc.)
+
+![browser_url](/images/browser_url.png?raw=true)
+
+3. (Optional) For 1080p canvases, add the `scale` modifier (ex. `https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=scale`) to scale the overlay by 1.5x
+
+## Options
+
+Options are added to the URL query as such:
+
+```
+http://reselim.github.io/overlay/?modifiers=top
+```
+
+### `ip` and `port`
+
+Listen to events from another IP and/or port.
+
+### `modifiers`
+
+Multiple modifiers can be seperated with commas.
+
+- `top`
+	* Moves the overlay to the top and reverses the layout vertically
+- `rtl`
+	* Moves the overlay to the right and uses right-to-left text
+- `scale`
+	* Scales the overlay by 1.5x, for use on 1080p canvases
+- `test`
+	* Makes the background black, for testing purposes
+
+---
 
 # Example Websocket Response
 ### response.command:
