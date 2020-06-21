@@ -25,7 +25,7 @@ A web-based overlay for FFR rCubed, based on: https://github.com/Reselim/beat-sa
 Options are added to the URL query as such:
 
 ```
-http://reselim.github.io/overlay/?modifiers=top
+https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=top
 ```
 
 ### `ip` and `port`
