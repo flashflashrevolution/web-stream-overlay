@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Overlay</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet"> 
+	</head>
+	
+	<body>
+		<div id="overlay" class="hidden">
+			<div id="performance">
+				<div class="performance-group">
+					<span class="text" id="pa-boo">0</span>
+					<span class="subtext">Boo</span>
+				</div>
+				
+				<div class="performance-group">
+					<span class="text" id="pa-miss">0</span>
+					<span class="subtext">Miss</span>
+				</div>
+				
+				<div class="performance-group">
+					<span class="text" id="pa-average">0</span>
+					<span class="subtext">Average</span>
+				</div>
+				
+				<div class="performance-group">
+					<span class="text" id="pa-good">0</span>
+					<span class="subtext">Good</span>
+				</div>
+				
+				<div class="performance-group">
+					<span class="text" id="pa-perfect">0</span>
+					<span class="subtext">Perfect</span>
+				</div>
+				
+				<div class="performance-group">
+					<span class="text" id="pa-amazing">0</span>
+					<span class="subtext">Amazing</span>
+				</div>
+
+				<div class="performance-group">
+					<span class="text" id="combo">0</span>
+					<span class="subtext">Combo</span>
+				</div>
+				
+				<span id="score">0</span>
+			</div>
+
+			<div id="chartfile">
+				<div id="cover">
+					<img id="image">
+					
+					<svg width="72" height="72">
+						<rect width="72" height="72" id="darken"></rect>
+						<circle cx="36" cy="36" r="30" id="remaining"></circle>
+						<circle cx="36" cy="36" r="30" id="progress"></circle>
+					</svg>
+
+					<div>
+						<span id="progress-text">0:00</span>
+					</div>
+				</div>
+
+				<div id="meta">
+					<div id="text">
+						<div id="titles">
+							<span id="title">Title</span>
+							<span id="style">Style</span>
+						</div>
+
+						<span id="artist">Artist</span>
+					</div>
+					
+					<div>
+						<span id="difficulty">120</span>
+						<span id="nps">0 - 0 NPS</span>
+						<span id="rating">0 Rating</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/options.js"></script>
+		
+		<script src="./js/ui.js"></script>
+		<script src="./js/commands.js"></script>
+		<script src="./js/manager.js"></script>
+	</body>
+</html>
