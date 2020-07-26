@@ -25,7 +25,11 @@ A web-based overlay for FFR rCubed, based on: https://github.com/Reselim/beat-sa
 Options are added to the URL query as such:
 
 ```
+# Single Modifier
 https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=top
+
+# Multiple Modifiers
+https://flashflashrevolution.github.io/web-stream-overlay/?modifiers=top,rtl,scale
 ```
 
 ### `ip` and `port`
@@ -34,18 +38,16 @@ Listen to events from another IP and/or port.
 
 ### `modifiers`
 
-Multiple modifiers can be separated with commas.
-
 - `preview`
 	* Shows placeholder info to allow stream setup.
 - `test`
-	* Makes the background black, for testing purposes
+	* Makes the background black, for testing purposes.
 - `top`
-	* Moves the overlay to the top and reverses the layout vertically
+	* Moves the overlay to the top and reverses the layout vertically.
 - `rtl`
-	* Moves the overlay to the right and uses right-to-left text
+	* Moves the overlay to the right and uses right-to-left text.
 - `scale`
-	* Scales the overlay by 1.5x, for use on 1080p canvases
+	* Scales the overlay by 1.5x, for use on 1080p canvases.
 - `hidechart`
 	* Hides the chart info.
 - `hidepa`
