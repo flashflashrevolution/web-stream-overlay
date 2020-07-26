@@ -16,14 +16,18 @@ const ui = (() => {
 		}
 
 		return (data) => {
-			score.innerText = format(data.score.score);
-			combo.innerText = format(data.score.combo);
-			paAmazing.innerText = format(data.score.amazing);
-			paPerfect.innerText = format(data.score.perfect);
-			paGood.innerText = format(data.score.good);
-			paAverage.innerText = format(data.score.average);
-			paMiss.innerText = format(data.score.miss);
-			paBoo.innerText = format(data.score.boo);
+			if(data.score != null) {				
+				var score_obj = typeof(data.score) == "object" ? data.score : data;
+				
+				score.innerText = format(score_obj.score);
+				combo.innerText = format(score_obj.combo);
+				paAmazing.innerText = format(score_obj.amazing);
+				paPerfect.innerText = format(score_obj.perfect);
+				paGood.innerText = format(score_obj.good);
+				paAverage.innerText = format(score_obj.average);
+				paMiss.innerText = format(score_obj.miss);
+				paBoo.innerText = format(score_obj.boo);
+			}
 		}
 	})();
 
@@ -102,7 +106,8 @@ const ui = (() => {
 
 	const chartfile = (() => {
 		var title = document.getElementById("title");
-		var style = document.getElementById("style");
+		var rate = document.getElementById("rate");
+		var engine = document.getElementById("engine");
 		var artist = document.getElementById("artist");
 
 		var difficulty = document.getElementById("difficulty");
@@ -124,10 +129,16 @@ const ui = (() => {
 		return (data, time) => {
 			title.innerText = data.song.name;
 			
-			if(data.engine != null) {
-				style.innerText = `[${data.engine.name}]`;
+			if(data.player.settings.songRate != 1) {
+				engine.innerText = `[${data.player.settings.songRate}x Rate]`;
 			} else {
-				style.innerText = "";
+				engine.innerText = "";
+			}
+			
+			if(data.engine != null) {
+				rate.innerText = `[${data.engine.name}]`;
+			} else {
+				rate.innerText = "";
 			}
 			
 			if(data.song.stepauthor == null || data.song.stepauthor.length == 0) {
@@ -138,9 +149,20 @@ const ui = (() => {
 			}
 			
 			difficulty.innerText = data.song.difficulty;
-			nps.innerText = `${format(data.song.nps_min | 0)} - ${format(data.song.nps_max | 0)} NPS`;
-			rating.innerText = `${format(data.song.song_rating | 0)} Rating`;
 			
+			// NPS - Optional
+			if(data.song.nps_min > 0 || data.song.nps_max > 0)
+				nps.innerText = `${format(data.song.nps_min | 0)} - ${format(data.song.nps_max | 0)} NPS`;
+			else
+				nps.innerText = '';
+			
+			// Song Rating - Optional
+			if(data.song.song_rating > 0)
+				rating.innerText = `${format(data.song.song_rating | 0)} Rating`;
+			else
+				rating.innerText = '';
+			
+			// Start Timer
 			timer.start(Date.now(), (data.song.time_seconds * 1000));
 		}
 	})();

@@ -1,6 +1,6 @@
 function connect() {
 	var ip = query.get("ip") || "localhost";
-	var port = query.get("port") || 1235;
+	var port = query.get("port") || 21235;
 	var hasConnection = false;
 
 	var socket = new WebSocket(`ws://${ip}:${port}`);
