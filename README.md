@@ -34,16 +34,24 @@ Listen to events from another IP and/or port.
 
 ### `modifiers`
 
-Multiple modifiers can be seperated with commas.
+Multiple modifiers can be separated with commas.
 
+- `preview`
+	* Shows placeholder info to allow stream setup.
+- `test`
+	* Makes the background black, for testing purposes
 - `top`
 	* Moves the overlay to the top and reverses the layout vertically
 - `rtl`
 	* Moves the overlay to the right and uses right-to-left text
 - `scale`
 	* Scales the overlay by 1.5x, for use on 1080p canvases
-- `test`
-	* Makes the background black, for testing purposes
+- `hidechart`
+	* Hides the chart info.
+- `hidepa`
+	* Hides the PA information, this still displays the score.
+- `showrating`
+	* Shows the User Song rating out of 5 stars.
 
 ---
 
@@ -54,10 +62,10 @@ Multiple modifiers can be seperated with commas.
  - SONG_RESUME
  - SONG_END
  - SONG_RESTART
- - NOTE_JUDGE
+ - NOTE_JUDGE (Different payload, See Below)
 
 ### response.data
-#### player
+#### .player
 	{
 	  "userid": 0,
 	  "name": "Username",
@@ -68,7 +76,7 @@ Multiple modifiers can be seperated with commas.
 	  "skill_level": 0,
 	  "skill_rating": 0
 	},
-#### song
+#### .song
 	{
 	  "genre": 1,
 	  "level": 328,
@@ -86,22 +94,32 @@ Multiple modifiers can be seperated with commas.
 	  "nps_max": 3,
 	  "song_rating": 4.15
 	},
-	
-#### score
+#### .engine
 	{
-	  "best_score": {
-	    "genre": 1,
-	    "rank": 226618,
-	    "rawscore": 0,
-	    "perfect": 0,
-	    "good": 0,
-	    "average": 0,
-	    "miss": 0,
-	    "boo": 0,
-	    "score": 0,
-	    "maxcombo": 0,
-	    "results": "0-0-0-0-0-0"
-	  },
+	  "domain": "prawnskunk.com",
+	  "config": "http://prawnskunk.com/ffrmania/r3.xml",
+	  "id": "ffrmania",
+	  "name": "FFRMania Engine"
+	}
+#### .best_score
+	{
+	  "genre": 1,
+	  "rank": 226618,
+	  "rawscore": 0,
+	  "perfect": 0,
+	  "good": 0,
+	  "average": 0,
+	  "miss": 0,
+	  "boo": 0,
+	  "score": 0,
+	  "maxcombo": 0,
+	  "results": "0-0-0-0-0-0"
+	}
+
+---
+
+### response.data (NOTE_JUDGE)
+	{
 	  "amazing": 0,
 	  "perfect": 0,
 	  "good": 0,
@@ -113,11 +131,4 @@ Multiple modifiers can be seperated with commas.
 	  "maxcombo": 0,
 	  "restarts": 0,
 	  "last_hit": null
-	}
-#### engine
-	{
-	  "domain": "prawnskunk.com",
-	  "config": "http://prawnskunk.com/ffrmania/r3.xml",
-	  "id": "ffrmania",
-	  "name": "FFRMania Engine"
 	}

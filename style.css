@@ -58,7 +58,13 @@ body {
 	font-weight: 700;
 }
 
-#style {
+#rate {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 4px 2px 4px;
+}
+
+#engine {
 	font-size: 14px;
 	font-weight: 600;
 	margin: 0 4px 2px 4px;
@@ -94,6 +100,7 @@ body {
 
 #rating {
 	margin: 0 0px;
+	display: none;
 }
 
 /* Progress */
@@ -200,14 +207,34 @@ body {
 		transform var(--hide);
 }
 
-#overlay #performance > *:nth-child(3) {
+#overlay #performance > *:nth-child(8) {
+	transition-delay: 50ms !important;
+}
+
+#overlay #performance > *:nth-child(7) {
 	transition-delay: 100ms !important;
 }
 
-#overlay #performance > *:nth-child(2) {
+#overlay #performance > *:nth-child(6) {
+	transition-delay: 150ms !important;
+}
+
+#overlay #performance > *:nth-child(5) {
 	transition-delay: 200ms !important;
 }
 
-#overlay #performance > *:nth-child(1) {
+#overlay #performance > *:nth-child(4) {
+	transition-delay: 250ms !important;
+}
+
+#overlay #performance > *:nth-child(3) {
 	transition-delay: 300ms !important;
+}
+
+#overlay #performance > *:nth-child(2) {
+	transition-delay: 350ms !important;
+}
+
+#overlay #performance > *:nth-child(1) {
+	transition-delay: 400ms !important;
 }

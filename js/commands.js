@@ -14,8 +14,9 @@ const commands = {
 		ui.timer.stop();
 		ui.hide();
 	},
-	SONG_RESTART() {
-		
+	SONG_RESTART(data, time) {
+		ui.chartfile(data, time);
+		ui.show();
 	},
 	NOTE_JUDGE(data, time) {
 		ui.score(data);
