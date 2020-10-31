@@ -52,6 +52,8 @@ Listen to events from another IP and/or port.
 	* Hides the chart info.
 - `hidepa`
 	* Hides the PA information, this still displays the score.
+- `hidescore`
+	* Hides the score.
 - `showrating`
 	* Shows the User Song rating out of 5 stars.
 
