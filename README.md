@@ -52,6 +52,8 @@ Listen to events from another IP and/or port.
 	* Hides the chart info.
 - `hidepa`
 	* Hides the PA information, this still displays the score.
+- `showpb`
+	* Shows the Personal Best PA.
 - `shownps`
 	* Shows the minimum to maximum Notes Per Second range.
 - `showrating`

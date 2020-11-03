@@ -111,6 +111,7 @@ const ui = (() => {
 		var artist = document.getElementById("artist");
 
 		var difficulty = document.getElementById("difficulty");
+		var pb = document.getElementById("pb");
 		var nps = document.getElementById("nps");
 		var rating = document.getElementById("rating");
 		
@@ -150,6 +151,9 @@ const ui = (() => {
 			
 			difficulty.innerText = data.song.difficulty;
 			
+			pb.innerText = `PB ${format(data.best_score.good | 0)}-${format(data.best_score.average | 0)}-` +
+				`${format(data.best_score.miss | 0)}-${format(data.best_score.boo | 0)}`;
+
 			// NPS - Optional
 			if(data.song.nps_min > 0 || data.song.nps_max > 0)
 				nps.innerText = `${format(data.song.nps_min | 0)} - ${format(data.song.nps_max | 0)} NPS`;
