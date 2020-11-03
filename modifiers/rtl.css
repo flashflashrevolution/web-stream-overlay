@@ -7,6 +7,6 @@
 	transform: translate(2px, 0);
 }
 
-#difficulty, #nps {
+.optional-stat {
 	direction: ltr;
 }
