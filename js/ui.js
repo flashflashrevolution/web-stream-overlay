@@ -151,6 +151,7 @@ const ui = (() => {
 			
 			difficulty.innerText = data.song.difficulty;
 			
+			// PB - Optional
 			pb.innerText = `PB ${format(data.best_score.good | 0)}-${format(data.best_score.average | 0)}-` +
 				`${format(data.best_score.miss | 0)}-${format(data.best_score.boo | 0)}`;
 
